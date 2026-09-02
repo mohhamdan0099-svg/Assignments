@@ -2,9 +2,10 @@
 .search-button{
     color: #08dbbb;
     background-color:white;
-  border-radius: 40px;
+    border-radius: 40px;
     width:150px;
     height:40px;
+    border-color: #08dbbb;
     
    
     
@@ -15,15 +16,18 @@
     color: white;
     background-color:#08dbbb;
     border-radius: 50%;
-     width:30px;
+    width:30px;
     height:30px;
+    border-color: #08dbbb;
+    
 
 }
+
 .create-account{
 
     color: white;
     background-color:rgb(43, 120, 228);
-     width:200px;
+    width:200px;
     height:50px;
     box-shadow: 5px 5px black;
 }
