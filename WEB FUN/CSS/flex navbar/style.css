@@ -1,0 +1,43 @@
+.nav{
+display: flex;
+justify-content: space-between;
+background-color: rgb(38, 38, 38);
+flex: 2;
+
+}
+
+.nav-title{
+    padding-left: 20px;
+    color: white;
+    
+
+}
+
+.nav-links{
+    gap: 20px;
+    display: flex;
+    align-items:center;
+    color: rgb(38, 38, 38);
+    padding-right: 20px;
+}
+
+.nav-links a{
+    text-decoration: none; 
+    color: white;
+}
+
+.active{
+    font-weight: bold;
+
+}
+
+.btn{
+ color: white;
+background-color: rgb(57, 196, 196);
+box-shadow:2px 2px black;
+border-color: black
+
+
+
+}
+
