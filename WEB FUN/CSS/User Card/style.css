@@ -1,0 +1,84 @@
+
+.white-space{
+    background-color: white;
+    height: 600px;
+    width: 1000px;
+    border: 7px solid #cfcfcf;
+    position: relative;
+    top: 30px;
+    left: 200px;
+}
+
+.blue-space{
+    background-color: #17a2b8;
+    height: 200px;
+    width: 1000px;
+}
+
+img{
+    width: 150px;
+    height: 160px;
+    position: relative;
+    top: 110px;
+    left: 40px;
+
+}
+
+h1{
+    position: relative;
+    top:100px;
+    left: 50px;
+    font-size: 40px;
+}
+
+.map{
+    width: 15px;
+    height: 25px;
+    position: relative;
+    top:95px;
+}
+
+.location{
+    position: relative;
+    top: 30px;
+    left: 70px;
+    font-size: 30px;
+
+}
+
+div p{
+    position: relative;
+    top: 75px;
+    left: 40px;
+    font-size: 30px;
+}
+
+.settings{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 75px;   
+}
+
+a{
+    position: relative;
+    top: 70px;
+    left:45px;
+    font-size: 30px;
+    color: #5689b5;
+}
+
+.content{
+    position: relative;
+    top: 50px;
+}
+
+.edit-profile{
+    position: relative;
+    bottom:95px;
+}
+
+.info{
+    position: relative;
+    bottom: 60px;
+}
