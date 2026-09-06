@@ -1,0 +1,226 @@
+.nav{
+display: flex;
+justify-content: space-between;
+background-color: rgb(38, 38, 38);
+flex: 2;
+
+}
+
+.nav-title{
+    padding-left: 20px;
+    color: white;
+    
+
+}
+
+.nav-links{
+    gap: 20px;
+    display: flex;
+    align-items:center;
+    color: rgb(38, 38, 38);
+    padding-right: 20px;
+}
+
+.nav-links a{
+    text-decoration: none; 
+    color: white;
+}
+
+.active{
+    font-weight: bold;
+
+}
+
+.btn{
+color: white;
+background-color: rgb(57, 196, 196);
+box-shadow:2px 2px black;
+border-color: black
+
+
+
+}
+
+
+.white-space{
+    background-color: white;
+    height: 300px;
+    width: 500px;
+    border: 7px solid #cfcfcf;
+    position: relative;
+    top: 15px;
+    left: 100px;
+}
+
+.blue-space{
+    background-color: #17a2b8;
+    height: 100px;
+    width: 500px;
+}
+
+.user-circle{
+    width: 75px;
+    height: 80px;
+    position: relative;
+    top: 65px;
+    left: 20px;
+
+}
+
+.Jane{
+    position: relative;
+    top:50px;
+    left: 25px;
+    font-size: 20px;
+}
+
+.map{
+    width: 10px;
+    height: 12px;
+    position: relative;
+    top:4px;
+    left:6px;
+}
+
+.location{
+    position: relative;
+    bottom: 30px;
+    left: 20px;
+    font-size: 15px;
+
+}
+
+.paragraph{
+    position: relative;
+    top: 35px;
+    left: 20px;
+    font-size: 15px;
+}
+
+.settings{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 35px;   
+}
+
+.edit-prof{
+    position: relative;
+    top: 30px;
+    
+    font-size: 15px;
+    color: #5689b5;
+}
+
+.content{
+    position: relative;
+    bottom:16px ;
+}
+
+.edit-profile{
+    position: relative;
+    bottom:80px;
+
+}
+
+.info{
+    position: relative;
+    bottom: 30px;
+}
+
+.white-box-1{
+    height: 150px; 
+    width:300px ;
+    background-color: white;
+    position: relative;
+    left: 700px;
+    bottom: 300px;
+    border: 4px solid #cfcfcf;
+}
+.black-box-1{
+    height: 50px;
+    width: 300px;
+    background-color: #333333;
+    position: relative;
+    bottom: 20px;
+}
+
+.todd-pic{
+height: 40px;
+width: 40px;
+position: relative;
+top: 20px;
+left: 10px;
+}
+
+.accept{
+    height: 20px;
+    width: 20px; 
+    position: relative;
+    top: 10px;
+    left: 150px;
+}
+
+.white-box-2{
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    border: 4px solid #cfcfcf;
+    position: relative;
+    top: 40px;
+}
+.black-box-2{
+    height: 50px;
+    width: 300px;
+    background-color: #333333;
+    position: relative;
+    bottom: 20px;
+    
+}
+.more-white{
+    height: 35px;
+    position: relative;
+    top: 190px;
+    border: 4px solid #cfcfcf; 
+    
+    
+}
+
+span{
+    background-color: gray;
+}
+
+h2{
+    color: white;
+}
+
+.white-box-3{
+    height: 200px;
+    width: 500px;
+    background-color: white;
+    border: 4px solid #cfcfcf;
+    position: relative;
+    right: 600px;
+    bottom: 100px;
+    font-size: 15px;
+
+
+
+}
+.black-box-3{
+    height: 50px;
+    width: 500px;
+    background-color: #333333;
+    position: relative;
+    bottom: 30px;
+    font-size: 18px;
+}
+
+.edu{
+    color: white;
+}
+
+a{
+    color: #5689b5;
+}
+
