@@ -1,8 +1,15 @@
-
+*{
+    background-color: rgb(234, 247, 255);
+}
+h1{
+    display: flex;
+    justify-content: center;
+    
+}
 .container{
     width: 100%;
     height: 100%;
-   
+
 }
 .row{
     display: flex;
@@ -19,10 +26,10 @@
 }
 
 .row-1{
-    background-color: lightblue;
+    background-color:rgb(95, 203, 251);
 }
 .row-2{
-    background-color: pink;
+    background-color: rgb(215, 155, 170);
 }
 .row-3{
 background-color:  white;
