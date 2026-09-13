@@ -22,6 +22,7 @@ align-items:center;
     
     display: flex;
     align-items:center;
+    gap: 20px;
     justify-content: space-evenly;
     color: rgb(38, 38, 38);
     padding-right: 20px;
@@ -142,6 +143,7 @@ border-color: black;
 }
 
 .white-box-1{
+    
     height: 150px; 
     width:300px ;
     background-color: white;
@@ -175,6 +177,7 @@ left: 10px;
 }
 
 .white-box-2{
+    
     height: 300px;
     width: 300px;
     background-color: white;
@@ -221,6 +224,7 @@ h2{
 
 }
 .black-box-3{
+    
     height: 50px;
     width: 500px;
     background-color: #333333;
@@ -236,4 +240,5 @@ h2{
 a{
     color: #5689b5;
 }
+
 
