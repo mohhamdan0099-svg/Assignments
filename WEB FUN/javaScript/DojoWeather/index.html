@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherForecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header> 
+        <div class="same-line">
+            <h1>DojoWeather</h1>
+        <ul>
+            <li onclick="alert()"> Burbank</li>
+            <li onclick="alert()">chicago</li>
+            <li onclick="alert()">Dallas</li>
+        </ul>
+        </div>
+    </header> 
+        <main>
+            <div class="city">
+                <h1>San Jose</h1>
+                <p>show temperature in <span><select onchange="changeDegree()" name="degree" id="degree">
+                <option value="c" >c </option>
+                <option value="f">f</option></span></p>
+                    </select>
+            </div>
+            <hr>
+        <div class="boxes">    
+            <div class="box">
+                <h1>Today</h1>
+                <img src="assets/some_rain.png" alt="" width="150px x 150px">
+                <p>some rain</p>
+                    <div class="degrees">
+                <p class="hot-degreeone">24 </p>
+                <p class="cold-degreeone"> 18</p>
+                    </div>
+            </div>
+            <div class="box">
+                <h1>Tommorow</h1>
+                <img src="assets/some_sun.png" alt="" width="150px x 150px">
+                <p>some sun</p>
+                    <div class="degrees">
+                <p class="hot-degreetwo">27 </p>
+                <p class="cold-degreetwo"> 19</p>
+                    </div>
+            </div>
+            <div class="box">
+                <h1>Friday</h1>
+                <img src="assets/some_clouds.png" alt="" width="150px x 150px">
+                <p>some cloud</p>
+                    <div class="degrees">
+                <p class="hot-degreethree">21 </p>
+                <p class="cold-degreethree"> 16</p>
+                    </div>
+            </div>
+            <div class="box">
+                <h1>Satarday</h1>
+                <img src="assets/some_sun.png" alt="" width="150px x 150px">
+                <p>some sun</p>
+                    <div class="degrees">
+                <p class="hot-degreefour">26 </p>
+                <p class="cold-degreefour"> 21</p>
+                    </div>
+            </div>
+                    </div>
+                    <div class="last-box">
+                        <img src="assets/cookie.png" alt="" width="60px" height="60px">
+                        <div class="para">
+                        <p><strong>Stop! cookie time </strong>
+                        <br>
+                        we use cookies(sadly not the edible ones) to personalize <br> content and ads, to provide social media features and to <br> analyzie our traffic <a href="#">Read more</a> </p>
+                        </div>
+                        <button onclick="hideit()">I accept</button>
+                    </div>
+                    <script src="script.js"></script>
+        </main>
+    
+    
+
+
+
+    
+</body>
+</html>
