@@ -1,7 +1,7 @@
 .same-line{
     margin: 0 auto;
     width: 60%;
-    gap: 420px;
+    gap: 340px;
     display: flex;
     color: white;
     justify-content: space-evenly;
@@ -17,7 +17,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 80px;
     list-style: none;
     font-size: 20px;
 }
@@ -39,7 +39,7 @@ margin-left: 300px;
 }
 .box{
     
-    padding-left: 20px;
+    padding-left: 10px;
     width: 200px;
     height: 350px;
     background-color: rgb(238 238 238);
@@ -52,6 +52,7 @@ margin-left: 300px;
     
 }
 .last-box{
+    position: fixed;
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
@@ -67,9 +68,13 @@ margin-left: 300px;
     display: flex;
 }
 button{
+    margin-left: 190px;
     width: 100px;
     height: 30px;
     background-color: rgb(159, 198, 248);
+    box-shadow: 3px 3px;
+    border:solid black;
+    
 }
 p{
     font-size: 20px;
@@ -87,20 +92,24 @@ img{
 
 }
 
-.box p p{
-    color: red;
-}
-span{
-    color:blue;
-}
-.hot-degree{
+
+.hot-degreeone,.hot-degreetwo,.hot-degreethree,.hot-degreefour{
     color: red;
 
 }
 
-.cold-degree{
+.cold-degreeone,.cold-degreetwo,.cold-degreethree,.cold-degreefour{
     color: blue;
 }
+
+
+a{
+    color: blue;
+}
+
+
+
+
 .degrees{
     display: flex;
     
