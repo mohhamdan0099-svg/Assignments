@@ -7,13 +7,20 @@ function custom(){
     alert();
 }
 
-function changeDegree(){
-    var hotDegree1=document.querySelector(".hot-degreeone");
+function removed(Element){
+    Element.remove();
+    
+}
+
+function changeDegree(element){
+
+    
+    var hotDegree1=document.querySelector("#degreejs");
     var hotDegree2=document.querySelector(".hot-degreetwo");
     var hotDegree3=document.querySelector(".hot-degreethree");
     var hotDegree4=document.querySelector(".hot-degreefour");
 
-    hotDegree1.innerText="75°";
+    hotDegree1.innerText="87";
     hotDegree2.innerText="80°";
     hotDegree3.innerText="69°";
     hotDegree4.innerText="78°";
@@ -29,3 +36,26 @@ function changeDegree(){
     coldDegree4.innerText="70°";
 
 }
+
+
+
+
+
+
+//     var degreee=document.querySelector('#degreejs');
+//     var c=document.querySelector('#degreejs');
+//     var c=parseInt(degreee.innerText);
+//     var ini=parseInt(degreee.innerText);
+//     if(element.value === "f°"){
+//     degreee.innerHTML=ini+10;
+//     }
+//     else(){
+    
+//     }
+// }
+
+
+// hotDegree1.innerText=(hotDegree1.innerText * 9 / 5) + 32;
+
+
+

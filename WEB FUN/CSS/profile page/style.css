@@ -1,244 +1,204 @@
-.nav{
-display: flex;
-background-color: rgb(38, 38, 38);
-justify-content: space-evenly;
-align-items:center;
+body{
+    margin: 0px;
 }
 
-.contt{
+header{
+    background-color: black;
+    
+}
+
+
+ul{
     display: flex;
-    
-    
-    
-}
-.nav-title{
-    padding-left: 20px;
-    color: white;
-    
+    gap: 30px;
+    list-style: none;
 
 }
 
-.nav-links{
-    
+.titles{
     display: flex;
-    align-items:center;
-    gap: 20px;
-    justify-content: space-evenly;
-    color: rgb(38, 38, 38);
-    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 430px;
 }
 
-.nav-links a{
-    text-decoration: none; 
+
+
+.left{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
     color: white;
-    
-    
 }
 
-.active{
-    font-weight: bold;
-
-}
-
-.btn{
+button{
+background-color: rgb(23, 162, 184);
 color: white;
-background-color: rgb(57, 196, 196);
-box-shadow:2px 2px black;
-border-color: black;
-
-
-
-
-
+width: 110px;
+height: 30px;
+font-size: 22px;
 }
 
 
-.white-space{
-    background-color: white;
-    height: 300px;
-    width: 500px;
-    border: 7px solid #cfcfcf;
-    position: relative;
-    top: 15px;
-    left: 100px;
+.whiteBox{
+    height: 400px;
+    width: 600px;
+    border: solid grey;
 }
-
-.blue-space{
-    background-color: #17a2b8;
+.blueBox{
+    
     height: 100px;
-    width: 500px;
+    background-color:rgb(23, 162, 184) ;
 }
-
-.user-circle{
-    width: 75px;
-    height: 80px;
-    position: relative;
-    top: 65px;
-    left: 20px;
+#pp{
+    margin-left: 30px;
+    margin-top: 40px;
     border-radius: 50%;
-    border: 4px solid #cfcfcf ;
-    
-
+    border: solid grey;
 }
 
-.Jane{
-    position: relative;
-    top:50px;
-    left: 25px;
-    font-size: 20px;
-}
-
-.map{
-    width: 10px;
-    height: 12px;
-    position: relative;
-    top:4px;
-    left:6px;
-}
-
-.location{
-    position: relative;
-    bottom: 30px;
-    left: 20px;
-    font-size: 15px;
-
-}
-
-.paragraph{
-    position: relative;
-    top: 35px;
-    left: 20px;
-    font-size: 15px;
-}
-
-.settings{
-    width: 15px;
-    height: 15px;
-    position: relative;
-    top: 35px;   
-}
-
-.edit-prof{
-    position: relative;
-    top: 30px;
-    
-    font-size: 15px;
-    color: #5689b5;
-}
-
-.content{
-    position: relative;
-    bottom:16px ;
-}
-
-.edit-profile{
-    position: relative;
-    bottom:80px;
-
-}
-
-.info{
-    position: relative;
-    bottom: 30px;
-}
-
-.white-box-1{
-    
-    height: 150px; 
-    width:300px ;
-    background-color: white;
-    position: relative;
-    left: 700px;
-    bottom: 300px;
-    border: 4px solid #cfcfcf;
-}
-.black-box-1{
-    height: 50px;
-    width: 300px;
-    background-color: #333333;
-    position: relative;
-    bottom: 20px;
-}
-
-.todd-pic{
-height: 40px;
-width: 40px;
-position: relative;
-top: 20px;
-left: 10px;
-}
-
-.accept{
-    height: 20px;
-    width: 20px; 
-    position: relative;
-    top: 10px;
-    left: 150px;
-}
-
-.white-box-2{
-    
-    height: 300px;
-    width: 300px;
-    background-color: white;
-    border: 4px solid #cfcfcf;
-    position: relative;
-    top: 40px;
-}
-.black-box-2{
-    height: 50px;
-    width: 300px;
-    background-color: #333333;
-    position: relative;
-    bottom: 20px;
-    
-}
-.more-white{
-    height: 35px;
-    position: relative;
-    top: 190px;
-    border: 4px solid #cfcfcf; 
-    
-    
-}
-
-span{
-    background-color: gray;
-}
-
-h2{
-    color: white;
-}
-
-.white-box-3{
+.whiteBox2{
+    margin-top: 50px;
+    border: solid grey;
     height: 200px;
-    width: 500px;
-    background-color: white;
-    border: 4px solid #cfcfcf;
-    position: relative;
-    right: 600px;
-    bottom: 100px;
-    font-size: 15px;
-
-
-
 }
-.black-box-3{
-    
+.whiteBox2 p{
+margin-left: 30px;
+}
+
+
+.BlackBox{
+    background-color: rgb(51, 51, 51);
     height: 50px;
-    width: 500px;
-    background-color: #333333;
-    position: relative;
-    bottom: 30px;
-    font-size: 18px;
+    display: flex;
 }
 
-.edu{
+.BlackBox p {
     color: white;
+}
+.arange{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 90%;
+}
+
+.asideBox1{
+height: 200px;
+width: 300px;
+border: solid grey;
+}
+
+.asideBox2{
+    margin-top: 50px;
+    height: 400px;
+    width: 300px;
+    border: solid grey;
+}
+.asideBlack1{
+background-color: rgb(51, 51, 51);
+width: 100%;
+height: 60px;
+display: flex;
+}
+.asideBlack2{
+
+background-color: rgb(51, 51, 51);
+width: 100%;
+height: 60px;
+display: flex;
+}
+
+img{
+    border-radius: 50%;
+    
+}
+
+main{
+    margin-top: 50px;
+}
+aside{
+    margin-top: 50px;
+}
+.content{
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.content label{
+    position: relative;
+    top: 1px;
+    left: 5px;
+}
+
+.asideBox1 .asideBlack1 p {
+color: white;
+
+
+}
+.asideBox1 .asideBlack1 span {
+color: black;
+background-color: rgb(204, 204, 204);
+border-radius: 50%;
+
+margin-left: 20px;
+
+}
+
+.asideBox2 .asideBlack2 p {
+color: white;  
+}
+
+.asideBox2 .asideBlack2 span {
+color: black;
+background-color: rgb(204, 204, 204);
+border-radius: 50%;
+margin-left: 20px;
+}
+
+.lastBox{
+    border-top:solid grey; 
+    width: 100%;
+    height: 17%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.Todd{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.Phill{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+label{
+    position: relative;
+    bottom: 20px;
+    font-size: 22px;
+}
+
+p{
+    font-size: 22px;
 }
 
 a{
-    color: #5689b5;
+    font-size: 22px;
+    color:rgb(30, 93, 153) ;
 }
 
+.x {
+    margin-right: 20px;
+}
 
+.lastBox a{
+    margin-left: 20px;
+}
+#grey{
+    color: rgb(153, 153, 153);
+}
