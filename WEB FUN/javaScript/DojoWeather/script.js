@@ -20,7 +20,7 @@ function changeDegree(element){
     var hotDegree3=document.querySelector(".hot-degreethree");
     var hotDegree4=document.querySelector(".hot-degreefour");
 
-    hotDegree1.innerText="87";
+    hotDegree1.innerText="87°";
     hotDegree2.innerText="80°";
     hotDegree3.innerText="69°";
     hotDegree4.innerText="78°";

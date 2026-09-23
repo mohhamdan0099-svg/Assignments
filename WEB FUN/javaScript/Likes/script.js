@@ -9,7 +9,7 @@ function increase1(){
 
 function increase2(){
     var count2=document.querySelector(".count-2");
-    var ini=parseInt(count2.innerText);
+    var ini=Number(count2.innerText);
     count2.innerText=ini+1;
 }
 
