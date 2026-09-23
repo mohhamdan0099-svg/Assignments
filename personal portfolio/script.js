@@ -1,20 +1,22 @@
-// Theme Switcher (Light / Dark Mode)
-const themeBtn = document.getElementById('themeToggle');
+// Step 1: Select the root <html> element
 const htmlElement = document.documentElement;
 
-// Check if user previously saved a theme preference in localStorage
+// Step 2: Check if the user previously saved a theme preference
 const savedTheme = localStorage.getItem('userTheme');
+
 if (savedTheme) {
-htmlElement.setAttribute('data-theme', savedTheme);
+  htmlElement.setAttribute('data-theme', savedTheme);
 }
 
-function toggleTheme() {
-const currentTheme = htmlElement.getAttribute('data-theme');
-const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+// Step 3: Function called directly by onclick="handleThemeClick()" in HTML
+function handleThemeClick() {
+  const currentTheme = htmlElement.getAttribute('data-theme');
 
-  // Set theme on <html> and save choice so it persists across pages
-htmlElement.setAttribute('data-theme', newTheme);
-localStorage.setItem('userTheme', newTheme);
+  if (currentTheme === 'light') {
+    htmlElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('userTheme', 'dark');
+  } else {
+    htmlElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('userTheme', 'light');
+  }
 }
-
-themeBtn.addEventListener('click', toggleTheme);
