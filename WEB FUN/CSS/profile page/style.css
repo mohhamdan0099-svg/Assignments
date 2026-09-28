@@ -1,0 +1,204 @@
+body{
+    margin: 0px;
+}
+
+header{
+    background-color: black;
+    
+}
+
+
+ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+
+}
+
+.titles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 430px;
+}
+
+
+
+.left{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+button{
+background-color: rgb(23, 162, 184);
+color: white;
+width: 110px;
+height: 30px;
+font-size: 22px;
+}
+
+
+.whiteBox{
+    height: 400px;
+    width: 600px;
+    border: solid grey;
+}
+.blueBox{
+    
+    height: 100px;
+    background-color:rgb(23, 162, 184) ;
+}
+#pp{
+    margin-left: 30px;
+    margin-top: 40px;
+    border-radius: 50%;
+    border: solid grey;
+}
+
+.whiteBox2{
+    margin-top: 50px;
+    border: solid grey;
+    height: 200px;
+}
+.whiteBox2 p{
+margin-left: 30px;
+}
+
+
+.BlackBox{
+    background-color: rgb(51, 51, 51);
+    height: 50px;
+    display: flex;
+}
+
+.BlackBox p {
+    color: white;
+}
+.arange{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 90%;
+}
+
+.asideBox1{
+height: 200px;
+width: 300px;
+border: solid grey;
+}
+
+.asideBox2{
+    margin-top: 50px;
+    height: 400px;
+    width: 300px;
+    border: solid grey;
+}
+.asideBlack1{
+background-color: rgb(51, 51, 51);
+width: 100%;
+height: 60px;
+display: flex;
+}
+.asideBlack2{
+
+background-color: rgb(51, 51, 51);
+width: 100%;
+height: 60px;
+display: flex;
+}
+
+img{
+    border-radius: 50%;
+    
+}
+
+main{
+    margin-top: 50px;
+}
+aside{
+    margin-top: 50px;
+}
+.content{
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.content label{
+    position: relative;
+    top: 1px;
+    left: 5px;
+}
+
+.asideBox1 .asideBlack1 p {
+color: white;
+
+
+}
+.asideBox1 .asideBlack1 span {
+color: black;
+background-color: rgb(204, 204, 204);
+border-radius: 50%;
+
+margin-left: 20px;
+
+}
+
+.asideBox2 .asideBlack2 p {
+color: white;  
+}
+
+.asideBox2 .asideBlack2 span {
+color: black;
+background-color: rgb(204, 204, 204);
+border-radius: 50%;
+margin-left: 20px;
+}
+
+.lastBox{
+    border-top:solid grey; 
+    width: 100%;
+    height: 17%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.Todd{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.Phill{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+label{
+    position: relative;
+    bottom: 20px;
+    font-size: 22px;
+}
+
+p{
+    font-size: 22px;
+}
+
+a{
+    font-size: 22px;
+    color:rgb(30, 93, 153) ;
+}
+
+.x {
+    margin-right: 20px;
+}
+
+.lastBox a{
+    margin-left: 20px;
+}
+#grey{
+    color: rgb(153, 153, 153);
+}
