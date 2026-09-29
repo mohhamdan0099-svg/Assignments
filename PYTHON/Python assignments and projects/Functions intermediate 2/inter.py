@@ -12,9 +12,33 @@ z = [ {'x': 10, 'y': 20} ]
 x[1][0]=15
 print(x)
 
+students[0]['last_name']='Bryant'
+print(students)
 
-for key in sports_directory:
-    print(key)
+
+sports_directory[ 'soccer'][0]='andres'
+print(sports_directory)
+
+z[0]['y']=30
+print(z)
+
+
+
+students = [
+        {'first_name':  'Michael', 'last_name' : 'Jordan'},
+        {'first_name' : 'John', 'last_name' : 'Rosales'},
+        {'first_name' : 'Mark', 'last_name' : 'Guillen'},
+        {'first_name' : 'KB', 'last_name' : 'Tonel'}
+    ]
+def iterateDictionary(students):
+    for student in students:
+        
+# should output: (it's okay if each key-value pair ends up on 2 separate lines;
+# bonus to get them to appear exactly as below!)
+# first_name - Michael, last_name - Jordan
+# first_name - John, last_name - Rosales
+# first_name - Mark, last_name - Guillen
+# first_name - KB, last_name - Tonel
 
 
 
