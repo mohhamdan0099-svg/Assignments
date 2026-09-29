@@ -24,24 +24,51 @@ print(z)
 
 
 
+def iterateDictionary(some_list):
+    for item in some_list:
+        output = []
+        for key, value in item.items():
+            output.append(f"{key} - {value}")
+        print(", ".join(output))
+
+
 students = [
-        {'first_name':  'Michael', 'last_name' : 'Jordan'},
-        {'first_name' : 'John', 'last_name' : 'Rosales'},
-        {'first_name' : 'Mark', 'last_name' : 'Guillen'},
-        {'first_name' : 'KB', 'last_name' : 'Tonel'}
-    ]
-def iterateDictionary(students):
-    for student in students:
-        
-# should output: (it's okay if each key-value pair ends up on 2 separate lines;
-# bonus to get them to appear exactly as below!)
-# first_name - Michael, last_name - Jordan
-# first_name - John, last_name - Rosales
-# first_name - Mark, last_name - Guillen
-# first_name - KB, last_name - Tonel
+    {'first_name':  'Michael', 'last_name': 'Jordan'},
+    {'first_name': 'John', 'last_name': 'Rosales'},
+    {'first_name': 'Mark', 'last_name': 'Guillen'},
+    {'first_name': 'KB', 'last_name': 'Tonel'}
+]
+
+iterateDictionary(students)
+
+
+
+
+
+def iterateDictionary2(key_name, some_list):
+    for item in some_list:
+        if key_name in item:
+            print(item[key_name])
+
+# Test Example:
+iterateDictionary2('first_name', students)
+iterateDictionary2('last_name', students)
 
 
 
 
 
 
+def printInfo(some_dict):
+    for key, val_list in some_dict.items():
+        print(f"{len(val_list)} {key.upper()}")
+        for val in val_list:
+            print(val)
+        print()  
+
+dojo = {
+    'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
+    'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
+}
+
+printInfo(dojo)
