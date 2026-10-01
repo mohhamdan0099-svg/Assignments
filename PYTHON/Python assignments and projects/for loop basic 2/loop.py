@@ -23,6 +23,8 @@ count_positive([1,2,0,-6,8])
 print(count_positive([1,2,0,-6,8]))    
 
 
+
+
 # sum total
 
 def sum_total(lis):
