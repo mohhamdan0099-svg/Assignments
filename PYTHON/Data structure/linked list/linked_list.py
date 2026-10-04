@@ -13,11 +13,11 @@ class LinkedList:
         self.head = None
 
     def add_to_start(self,data):
-        new_node= Node(data)
+        new_node = Node(data)
         if self.head == None:
             self.head = new_node
             return self
-        
+                        
         new_node.next=self.head
         self.head = new_node
         return self
@@ -27,9 +27,28 @@ class LinkedList:
         if self.head == None:
             self.head = new_node
             return self
-        
+                    
         current=self.head
         while current.next!=None:
             current=current.next
         current.next= new_node
         return self
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        
+                
+                
+        
+            
