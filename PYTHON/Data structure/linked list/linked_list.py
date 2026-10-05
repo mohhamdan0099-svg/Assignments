@@ -34,8 +34,23 @@ class LinkedList:
         current.next= new_node
         return self
 
+    def add_after(self,value):
+        pass
 
-        
+    def add_to_middle(self,value):
+        pass
+
+
+
+    def delete_node(self):
+
+        if self.head == None:
+            return self
+        current=self.head
+        while current.next!=None:
+            current=current.next
+        current.next= None
+        return self
 
 
 
