@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    {%for j in range(colos)%}
+    <div class="row">
+    {%for i in range(rows)%}
+    {%if (i+j)%2==0 %} 
+    <div class="box" style="background-color: red;"></div>
+    {%endif%}
+    {%if (i+j)%2!=0 %} 
+    <div class="box" style="background-color: black;"></div>
+    {%endif%}
+    
+    {%endfor%}
+    </div>
+    {%endfor%}
+</body>
+</html>
