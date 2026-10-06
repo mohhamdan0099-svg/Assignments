@@ -42,15 +42,17 @@ class LinkedList:
 
 
 
-    def delete_node(self):
+    def delete_node(self,value):
 
-        if self.head == None:
-            return self
-        current=self.head
-        while current.next!=None:
-            current=current.next
-        current.next= None
-        return self
+        if self.head.value==value:
+            self.head=self.head.next
+
+        curr=self.head
+        while curr:
+            if curr.next.value==value:
+                break
+            curr=curr.next
+            curr.next=curr.next.next    
 
 
 
