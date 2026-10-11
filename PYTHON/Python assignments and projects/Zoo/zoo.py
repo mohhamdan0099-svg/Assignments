@@ -17,6 +17,10 @@ class Animal:
         self.health += amount
         self.happines += amount
 
+animal1=Animal("tiger")
+animal1.feed(10)
+animal1.display_info()       
+
 
 class Lion(Animal):
 

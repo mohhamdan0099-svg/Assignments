@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>Great Number Game</title></head>
+<body>
+    <h1>Welcome to the Great Number Game!</h1>
+    <p>I am thinking of a number between 1 and 100</p>
+
+    {% if session.get('game_status') != 'win' %}
+        <form action="/guess" method="POST">
+            <input type="number" name="guess" >
+            <button type="submit">Submit Guess</button>
+        </form>
+    {% endif %}
+
+    {% if session.get('game_status') == 'high' %}
+        <p style="background-color: red; color: white;">Too High!</p>
+    {% elif session.get('game_status') == 'low' %}
+        <p style="background-color: red; color: white;">Too Low!</p>
+    {% elif session.get('game_status') == 'win' %}
+        <p style="background-color: green; color: white;">{{ session['number'] }} is the number! You won!</p>
+        <form action="/reset" method="POST">
+            <button type="submit">Play Again!</button>
+        </form>
+    {% endif %}
+
+
+
+
+</body>
+</html>
