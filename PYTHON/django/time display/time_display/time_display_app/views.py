@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from time import gmtime, strftime
+from time import localtime, strftime
 
 
 def index(request):
     context = {
-        'date': strftime("%b %d, %Y", gmtime()),
-        'time': strftime("%I:%M %p", gmtime())
+        'date': strftime("%b %d, %Y", localtime()),
+        'time': strftime("%H: %M %p", localtime())
     }
     return render(request, 'index.html', context)
