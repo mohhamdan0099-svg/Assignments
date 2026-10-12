@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dojo survey</title>
+    <link rel="stylesheet" href="{% static 'dojo_app/sstyle.css' %}">
+</head>
+<body>
+    <div class="container">
+        <form action="result/" method='post'>
+            {% csrf_token %}
+            <div>
+                <label for="name">your name </label>
+                <input type="text" value="" name="name">
+            </div>
+            <div>
+                <label for="dojo location">your Dojo location </label>
+                <select name="location" id="dojo location" ><option value="san jose">san jose</option></select>
+            </div>
+            <div>
+                <label for="favorite language">favorite language </label>
+                <select name="language" id="favorite language" ><option value="python">python</option></select>
+            </div>
+            <div>
+                <label for="comment">Comment(optional) </label>
+                <textarea name="comment" id="comment"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="submit the form">
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
