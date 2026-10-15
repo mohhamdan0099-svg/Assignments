@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users with Templates</title>
+</head>
+<body>
+
+    <h1>All the Users</h1>
+    
+    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>created at</th>
+                <th>updated at</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for user in all_the_users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.first_name }} {{ user.last_name }}</td>
+                <td>{{ user.email_address }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{user.created_at}}</td>
+                <td>{{user.updated_at}}</td>
+                <td><form action="/delete/{{user.id}}" method="post">
+                {% csrf_token %}
+                <button type="submit">delete user</button>
+
+                </form></td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <hr>
+
+    
+    <h2>Add a User</h2>
+    <form action="/create_user" method="POST">
+        {% csrf_token %}
+        <div>
+            <label>First Name:</label>
+            <input type="text" name="first_name">
+        </div>
+        <div>
+            <label>Last Name:</label>
+            <input type="text" name="last_name">
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="text" name="email">
+        </div>
+        <div>
+            <label>Age:</label>
+            <input type="number" name="age">
+        </div>
+        <button type="submit">Add</button>
+    </form>
+    
+
+</body>
+</html>
