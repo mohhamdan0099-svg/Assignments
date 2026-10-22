@@ -59,3 +59,14 @@ def add_book_to_author(request, author_id):
         book = Book.objects.get(id=request.POST['book_id'])
         author.books.add(book)
     return redirect(f'/authors/{author_id}')
+
+def new_page(request):
+
+    return render(request, "new_page.html")
+
+def submit(request):
+    Author.objects.create(
+        username=request.POST['username'],
+        password=request.POST['password']
+    )
+    return redirect('/authors')

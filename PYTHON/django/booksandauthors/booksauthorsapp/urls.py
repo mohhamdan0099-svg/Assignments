@@ -11,4 +11,6 @@ urlpatterns = [
     path('authors/create', views.add_author),
     path('authors/<int:author_id>', views.view_author),
     path('authors/<int:author_id>/add_book', views.add_book_to_author),
+    path('new_page/',views.new_page),
+    path('submit',views.submit)
 ]

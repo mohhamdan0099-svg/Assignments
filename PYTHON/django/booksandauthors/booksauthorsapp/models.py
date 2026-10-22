@@ -13,5 +13,7 @@ class Author(models.Model):
     last_name=models.CharField(max_length=255)
     notes=models.TextField()
     books=models.ManyToManyField(Book,related_name="authors")
+    username=models.CharField(max_length=255)
+    password=models.CharField(max_length=255)
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
