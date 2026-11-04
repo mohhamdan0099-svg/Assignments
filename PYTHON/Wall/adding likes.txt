@@ -1,0 +1,72 @@
+class Message(models.Model):
+    message = models.TextField()
+    # This creates a Many-to-Many relationship between User and Message
+    # related_name allows you to do message.user_likes.all()
+    user_likes = models.ManyToManyField(User, related_name="liked_messages")
+    user = models.ForeignKey(User, related_name="messages", on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+
+def like_message(request, message_id):
+    if 'user_id' not in request.session:
+        return redirect('/')
+    
+    # Get the current logged-in user and the target message
+    user = User.objects.get(id=request.session['user_id'])
+    message = Message.objects.get(id=message_id)
+    
+    # Check if the user already liked this message
+    if user in message.user_likes.all():
+        # Unlike: remove user from likes
+        message.user_likes.remove(user)
+    else:
+        # Like: add user to likes
+        message.user_likes.add(user)
+        
+    return redirect('/wall')
+
+
+path('wall/like/<int:message_id>', views.like_message),
+
+
+
+{% for message in all_messages %}
+    <div>
+        <h3>{{ message.user.first_name }} {{ message.user.last_name }} - {{ message.created_at|date:"M d, Y h:i A" }}</h3>
+        <p>{{ message.message }}</p>
+
+        <!-- Like Section -->
+        <p>
+            <strong>Likes:</strong> {{ message.user_likes.count }}
+            
+            <!-- Form or link to trigger the like route -->
+            <form action="/wall/like/{{ message.id }}" method="POST" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit">
+                    {% if current_user in message.user_likes.all %}
+                        Unlike 💔
+                    {% else %}
+                        Like 👍
+                    {% endif %}
+                </button>
+            </form>
+        </p>
+
+        <!-- Comments section from before -->
+        <div style="margin-left: 30px;">
+            <h4>Comments:</h4>
+            {% for comment in message.comments.all %}
+                <p><strong>{{ comment.user.first_name }}:</strong> {{ comment.comment }}</p>
+            {% endfor %}
+
+            <form action="/wall/post_comment/{{ message.id }}" method="POST">
+                {% csrf_token %}
+                <input type="text" name="comment" placeholder="Write a comment...">
+                <button type="submit">Post Comment</button>
+            </form>
+        </div>
+    </div>
+    <hr>
+{% endfor %}

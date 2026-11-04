@@ -8,7 +8,7 @@ urlpatterns=[
     path('create/',views.create),
     path('shows/delete/<int:id>',views.delete),
     path('shows/<int:id>/',views.new_show),
-    path('shows/edit/<int:id>',views.edit),
+    path('shows/edit/<int:id>/',views.edit),
     path('shows/edit/<int:id>/update/',views.update),
     
 ]

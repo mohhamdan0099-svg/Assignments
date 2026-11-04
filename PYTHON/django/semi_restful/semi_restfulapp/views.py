@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect
+from django.contrib import messages
 from .models import Show
 
 
@@ -20,12 +21,23 @@ def index(request):
 
 
 def create(request):
-    show=Show.objects.create(
-        title=request.POST['title'],
-        network=request.POST['network'],
-        release_date=request.POST['date'],
-        description=request.POST['desc'],
-    )
+    if request.method== "POST":
+        errors = Show.objects.validator(request.POST)
+        if errors:
+            for key, value in errors.items():
+                messages.error(request, value)
+
+            request.session['temp_title'] = request.POST['title']
+            request.session['temp_net'] = request.POST['network']   
+            request.session['temp_desc'] = request.POST['desc']
+            return redirect('/shows/new/')
+        else:
+            show=Show.objects.create(
+                title=request.POST['title'],
+                network=request.POST['network'],
+                release_date=request.POST['date'],
+                description=request.POST['desc'],
+                )
     return redirect(f'/shows/{show.id}')
 
 def new_show(request,id):
@@ -54,13 +66,24 @@ def edit(request,id):
 
 def update(request,id):
 
-    edited=Show.objects.get(id=id)
-    edited.title=request.POST['title']
-    edited.network=request.POST['network']
-    edited.release_date=request.POST['date']
-    edited.description=request.POST['desc']
-    edited.save()
-    return redirect(f"/shows/{id}/")
+    if request.method== "POST":
+        errors = Show.objects.validator(request.POST)
+        if errors:
+            for key, value in errors.items():
+                messages.error(request, value)
+    
+                request.session['temp_title'] = request.POST['title']
+                request.session['temp_net'] = request.POST['network']   
+                request.session['temp_desc'] = request.POST['desc']
+            return redirect(f"/shows/edit/{id}/")
+        else:
+            edited=Show.objects.get(id=id)
+            edited.title=request.POST['title']
+            edited.network=request.POST['network']
+            edited.release_date=request.POST['date']
+            edited.description=request.POST['desc']
+            edited.save()
+            return redirect(f"/shows/{id}/")
     
     
     

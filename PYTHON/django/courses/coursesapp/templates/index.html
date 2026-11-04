@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        table { border-collapse: collapse; width: 600px; margin-top: 20px; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .errors { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Add a new course</h1>
+    
+
+    {% if messages %}
+        <ul class="errors">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form action="/courses/create" method="POST">
+        {% csrf_token %}
+        <p>
+            Name: <input type="text" name="name" value="{{ request.session.temp_name }}">
+        </p>
+        <p>
+            Description: <textarea name="description">{{ request.session.temp_desc }}</textarea>
+        </p>
+        <input type="submit" value="Add">
+    </form>
+
+    <h2>Courses</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Course Title</th>
+                <th>Description</th>
+                <th>Date Added</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in courses %}
+            <tr>
+                <td>{{ course.name }}</td>
+                <td>{{ course.description }}</td>
+                <td>{{ course.created_at|date:"Y-m-d H:i" }}</td>
+                <td><a href="/courses/destroy/{{ course.id }}">remove</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

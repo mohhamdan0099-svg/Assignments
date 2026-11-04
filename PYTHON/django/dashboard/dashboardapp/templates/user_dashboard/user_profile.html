@@ -1,0 +1,31 @@
+{% extends 'user_dashboard/base.html' %}
+{% block title %}{{ profile_user.first_name }}'s Profile{% endblock %}
+{% block content %}
+<div class="card">
+    <h2>{{ profile_user.first_name }} {{ profile_user.last_name }}</h2>
+    <p><strong>Registered at:</strong> {{ profile_user.created_at|date:"F d, Y" }}</p>
+    <p><strong>User ID:</strong> #{{ profile_user.id }}</p>
+    <p><strong>Email address:</strong> {{ profile_user.email }}</p>
+    <p><strong>Description:</strong> {{ profile_user.description|default:"No description provided yet." }}</p>
+
+    <hr style="margin: 20px 0;">
+
+    <h3>Leave a message for {{ profile_user.first_name }}</h3>
+    <form action="/messages/create/{{ profile_user.id }}/" method="POST">
+        {% csrf_token %}
+        <textarea name="content" rows="3" required placeholder="Write a message..." style="width: 100%; padding: 8px;"></textarea>
+        <button type="submit" style="margin-top: 10px; padding: 8px 15px; background: #007BFF; color: white; border: none; border-radius: 3px;">Post</button>
+    </form>
+
+    <h3 style="margin-top: 30px;">Messages</h3>
+    {% for message in profile_user.messages_received.all %}
+        <div style="background: #f1f1f1; padding: 10px; margin-bottom: 10px; border-radius: 3px;">
+            <p><a href="/users/show/{{ message.poster.id }}/"><strong>{{ message.poster.first_name }} {{ message.poster.last_name }}</strong></a> wrote:</p>
+            <p>{{ message.content }}</p>
+            <small style="color: gray;">{{ message.created_at|timesince }} ago</small>
+        </div>
+    {% empty %}
+        <p style="color: gray;">No messages yet. Be the first to leave one!</p>
+    {% endfor %}
+</div>
+{% endblock %}

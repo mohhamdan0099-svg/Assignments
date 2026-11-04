@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Are you sure?</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .box { border: 1px solid black; padding: 20px; width: 450px; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Are you sure you want to delete the following course?</h2>
+        <p><strong>Name:</strong> {{ course.name }}</p>
+        <p><strong>Description:</strong> {{ course.description }}</p>
+        
+        <form action="/courses/remove/{{ course.id }}" method="POST" style="display:inline;">
+            {% csrf_token %}
+            <input type="submit" value="Yes, I want to delete this">
+        </form>
+        
+        <form action="/" method="GET" style="display:inline;">
+            <input type="submit" value="No">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite Books Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ current_user.first_name }}!</h1>
+    <a href="/logout">Log Out</a>
+
+    {% if messages %}
+        <ul style="color: red;">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <div>
+        <h2>Add a Favorite Book</h2>
+        <form action="/books/add_book/" method="POST">
+            {% csrf_token %}
+            <p>Title: <input type="text" name="title"></p>
+            <p>Description: <textarea name="description"></textarea></p>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
+    <div>
+        <h2>All Books</h2>
+        <ul>
+            {% for book in all_books %}
+                <li>
+                    <!-- Link to book detail page -->
+                    <a href="/books/{{ book.id }}">{{ book.title }}</a> 
+                    (uploaded by {{ book.uploaded_by.first_name }} {{ book.uploaded_by.last_name }})
+                    
+                    <!-- Favorite / Un-favorite handling on dashboard -->
+                    {% if current_user in book.users_who_like.all %}
+                        <p><em>This is one of your favorites</em> | <a href="/books/{{ book.id }}/favorite">Un-favorite</a></p>
+                    {% else %}
+                        <p><a href="/books/{{ book.id }}/favorite">Add to Favorites</a></p>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'user_dashboard/base.html' %}
+{% block title %}Add New User{% endblock %}
+{% block content %}
+<div class="card" style="max-width: 500px; margin: auto;">
+    <h2>Add a new user</h2>
+    <form action="/users/create/" method="POST">
+        {% csrf_token %}
+        <p>Email Address:<br><input type="email" name="email" required style="width: 100%; padding: 8px;"></p>
+        <p>First Name:<br><input type="text" name="first_name" required style="width: 100%; padding: 8px;"></p>
+        <p>Last Name:<br><input type="text" name="last_name" required style="width: 100%; padding: 8px;"></p>
+        <p>User Level:<br>
+            <select name="user_level" style="width: 100%; padding: 8px;">
+                <option value="1">Normal</option>
+                <option value="9">Admin</option>
+            </select>
+        </p>
+        <p>Password:<br><input type="password" name="password" required style="width: 100%; padding: 8px;"></p>
+        <p>Password Confirmation:<br><input type="password" name="password_confirm" required style="width: 100%; padding: 8px;"></p>
+        <button type="submit" style="margin-top: 10px; padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 3px;">Create</button>
+    </form>
+</div>
+{% endblock %}
