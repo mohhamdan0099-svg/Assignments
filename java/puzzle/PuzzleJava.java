@@ -11,22 +11,26 @@ Random randMachine = new Random();
         return randomRolls;
         }
 
-    public String getRandomLetter(){
+    public char getRandomLetter(){
         char[] alphabets = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
         int result = randMachine.nextInt(alphabets.length);
-        return String.valueOf(alphabets[result]);  
+        return (alphabets[result]);  
     }
-    
-    public String generatePass(){
-        String randomPass = new String();
-        for (int i = 0; i < 8; i++){
-        randomPass += getRandomLetter();
-        }
-        return randomPass;
+public String generatePass() {
+    String chars = "abcdefghijklmnopqrstuvwxyz";
+    String nums="123456789";
+    String randomPass = "";
+    Random randMachine = new Random();
+    int randomNum = randMachine.nextInt(nums.length());
+    randomPass += nums.charAt(randomNum);
+    for (int i = 1; i < 8; i++) {
+        int randomIndex = randMachine.nextInt(chars.length());
+        randomPass += chars.charAt(randomIndex);
     }
+    return randomPass;
+}
 
     public ArrayList<String> getNewPass(int length){
-        // get (length) random words
         ArrayList<String> randWords = new ArrayList<String>();
         for (int i = 0; i < length; i++){
         randWords.add(generatePass());
