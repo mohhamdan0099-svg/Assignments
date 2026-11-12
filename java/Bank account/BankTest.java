@@ -13,7 +13,7 @@ public class BankTest {
     System.out.println(Emil.getAccNum());
 
 
-    
+
   System.out.println(BankAcc.getAccounts());
     
   }
