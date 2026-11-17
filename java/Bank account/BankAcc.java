@@ -8,6 +8,7 @@ public class BankAcc {
 	    // MEMBER VARIABLES
 	private double checkingBalance;
 	private double savingsBalance;
+	public  String accounttype; 
 
 	private String accountNum;
 
@@ -17,10 +18,11 @@ public class BankAcc {
 	    // CONSTRUCTOR
 	    // Be sure to increment the number of accounts
 
-	BankAcc(double checkingBalance, double savingsBalance){
+	BankAcc(double checkingBalance, double savingsBalance, String accounttype){
         this.checkingBalance = checkingBalance;
 		this.savingsBalance = savingsBalance;
 		this.accountNum = setAccountNum();
+		this.accounttype = accounttype;
         allAccounts();
 	}
 
