@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f6f2;
+    color: #2b211e;
+    margin: 40px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #d96b6b;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 18px solid #f4b6b6;
+    background-color: #ffffff;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #f4b6b6;
+}
+
+th {
+    font-weight: bold;
+}
+
+.orange-text {
+    color: orange;
+    font-weight: bold;
+}
