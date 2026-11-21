@@ -1,0 +1,22 @@
+.dashboard-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-top: 80px;
+    font-size: 1.5rem;
+}
+
+.date-text {
+    color: blue;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.time-text {
+    color: green;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 40px;
+}
